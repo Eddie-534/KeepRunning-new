@@ -1,0 +1,53 @@
+<svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rainbow Shoe - Level 5 -->
+  <defs>
+    <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style={{stopColor: "#ff6b6b", stopOpacity: 1}} />
+      <stop offset="20%" style={{stopColor: "#feca57", stopOpacity: 1}} />
+      <stop offset="40%" style={{stopColor: "#48dbfb", stopOpacity: 1}} />
+      <stop offset="60%" style={{stopColor: "#ff9ff3", stopOpacity: 1}} />
+      <stop offset="80%" style={{stopColor: "#54a0ff", stopOpacity: 1}} />
+      <stop offset="100%" style={{stopColor: "#5f27cd", stopOpacity: 1}} />
+    </linearGradient>
+    <linearGradient id="rainbowUpper" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style={{stopColor: "#ff6b6b", stopOpacity: 1}} />
+      <stop offset="33%" style={{stopColor: "#feca57", stopOpacity: 1}} />
+      <stop offset="66%" style={{stopColor: "#48dbfb", stopOpacity: 1}} />
+      <stop offset="100%" style={{stopColor: "#ff9ff3", stopOpacity: 1}} />
+    </linearGradient>
+    <filter id="rainbowGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Shoe sole -->
+  <path d="M8 52 L25 32 L42 38 L62 35 L82 42 L92 50 L87 72 L13 72 Z" fill="url(#rainbowGrad)" stroke="#fff" stroke-width="2" filter="url(#rainbowGlow)"/>
+  <!-- Shoe upper -->
+  <path d="M25 32 L35 12 L50 10 L65 14 L75 30 L62 35 Z" fill="url(#rainbowUpper)" stroke="#fff" stroke-width="1.5"/>
+  <!-- Laces (rainbow colors) -->
+  <ellipse cx="42" cy="26" rx="8" ry="4" fill="#2d3436"/>
+  <ellipse cx="52" cy="24" rx="8" ry="4" fill="#2d3436"/>
+  <ellipse cx="62" cy="26" rx="6" ry="3" fill="#2d3436"/>
+  <!-- Heel tab -->
+  <path d="M45 4 L60 4 L53 10 L52 10 Z" fill="url(#rainbowGrad)"/>
+  <!-- Rainbow sparkle effects -->
+  <circle cx="35" cy="20" r="3" fill="#fff" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="55" cy="18" r="2" fill="#fff" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="70" cy="25" r="2.5" fill="#fff" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Rainbow shine effects -->
+  <ellipse cx="40" cy="58" rx="15" ry="3" fill="rgba(255,255,255,0.6)"/>
+  <ellipse cx="60" cy="55" rx="10" ry="2" fill="rgba(255,255,255,0.5)"/>
+  <ellipse cx="30" cy="52" rx="8" ry="2" fill="rgba(255,107,107,0.4)"/>
+  <ellipse cx="75" cy="50" rx="6" ry="1.5" fill="rgba(72,219,251,0.4)"/>
+  <!-- Sole details -->
+  <circle cx="25" cy="43" r="3" fill="#2d3436"/>
+  <circle cx="42" cy="45" r="3" fill="#2d3436"/>
+  <circle cx="62" cy="42" r="3" fill="#2d3436"/>
+  <circle cx="82" cy="49" r="2" fill="#2d3436"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base Shoe - Level 1 (Gray/White) -->
+  <defs>
+    <linearGradient id="baseShoeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style={{stopColor: "#8b949e", stopOpacity: 1}} />
+      <stop offset="100%" style={{stopColor: "#6a737d", stopOpacity: 1}} />
+    </linearGradient>
+  </defs>
+  <!-- Shoe sole -->
+  <path d="M8 52 L25 40 L42 46 L62 43 L82 50 L92 58 L87 72 L13 72 Z" fill="url(#baseShoeGrad)" stroke="#586069" stroke-width="2"/>
+  <!-- Shoe upper -->
+  <path d="M25 40 L35 28 L50 26 L65 30 L75 38 L62 43 Z" fill="#e6edf3" stroke="#8b949e" stroke-width="1.5"/>
+  <!-- Laces -->
+  <ellipse cx="42" cy="35" rx="8" ry="4" fill="#6a737d"/>
+  <ellipse cx="52" cy="33" rx="8" ry="4" fill="#6a737d"/>
+  <ellipse cx="62" cy="35" rx="6" ry="3" fill="#6a737d"/>
+  <!-- Heel tab -->
+  <path d="M45 20 L55 20 L52 26 L48 26 Z" fill="#6e7681"/>
+  <!-- Sole details -->
+  <circle cx="25" cy="48" r="3" fill="#586069"/>
+  <circle cx="42" cy="50" r="3" fill="#586069"/>
+  <circle cx="62" cy="47" r="3" fill="#586069"/>
+  <circle cx="82" cy="54" r="2" fill="#586069"/>
+</svg>
