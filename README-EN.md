@@ -2,7 +2,7 @@
 
 
 
-<h2>1\. Project Introduction</h2>
+<h2>1. Project Introduction</h2>
 
 Keep Running is a decentralized application based on the Reactive Network that allows users to upgrade their shoe NFTs through running. Each running record is permanently stored on-chain. When the accumulated mileage reaches a threshold, the shoe NFT automatically upgrades without any manual intervention.
 
@@ -18,7 +18,7 @@ Core Functions:
 
 
 
-<h2>2\. Problem Solved by Reactive Network</h2>
+<h2>2. Problem Solved by Reactive Network</h2>
 
 Pain Points of Traditional Solutions
 
@@ -44,7 +44,7 @@ Yes, but it would require a centralized backend or oracles, introducing trust as
 
 
 
-<h2>3\. Deployed Contract Addresses</h2>
+<h2>3. Deployed Contract Addresses</h2>
 
 •	ShoeRunOrigin (sepolia): 0x6Ebb6a7aF80cd03efB27D626F73C6502795F8624
 
@@ -54,7 +54,7 @@ Yes, but it would require a centralized backend or oracles, introducing trust as
 
 
 
-<h2>4\. Complete Transaction Hash Records</h2>
+<h2>4. Complete Transaction Hash Records</h2>
 
 Step 1: User Submits Running Record (Origin Transaction)
 
@@ -80,7 +80,7 @@ Step 3: NFT Upgrade Completed (Destination Transaction)
 
 
 
-<h2>5\. Post-Deployment Workflow</h2>
+<h2>5. Post-Deployment Workflow</h2>
 
 1\.	User Connects Wallet: Frontend clicks "Connect Wallet," MetaMask pops up, switch to Sepolia.
 
@@ -102,7 +102,7 @@ Step 3: NFT Upgrade Completed (Destination Transaction)
 
 
 
-<h2>6\. Environment Configuration</h2>
+<h2>6. Environment Configuration</h2>
 
 Environment Variable Description
 
@@ -142,7 +142,7 @@ REACT\_APP\_WEBSOCKET\_URL=ws://localhost:3001
 
 
 
-<h2>7\. Local Run Instructions</h2>
+<h2>7. Local Run Instructions</h2>
 
 Requirements
 
@@ -342,7 +342,7 @@ Step 6: Use the Application
 
 
 
-<h2>8\. Demo Video</h2>
+<h2>8. Demo Video</h2>
 
 \[Watch the video demonstration file]
 
@@ -358,7 +358,7 @@ Video content includes:
 
 
 
-<h2>9\. Shoe Level System</h2>
+<h2>9. Shoe Level System</h2>
 
 Level	Name	Cumulative Distance Required	Visual Style
 
@@ -374,7 +374,7 @@ Level	Name	Cumulative Distance Required	Visual Style
 
 
 
-<h2>10\. Project Structure</h2>
+<h2>10. Project Structure</h2>
 
 text
 
@@ -434,7 +434,7 @@ keep-running/
 
 
 
-<h2>11\. Technical Architecture</h2>
+<h2>11. Technical Architecture</h2>
 
 text
 
@@ -472,7 +472,7 @@ text
 
 
 
-<h2>12\. Team Information</h2>
+<h2>12. Team Information</h2>
 
 •	Project Name: Keep Running
 
@@ -482,7 +482,7 @@ text
 
 
 
-<h2>13\. Future Expansion</h2>
+<h2>13. Future Expansion</h2>
 
 Deepening NFT Value
 
