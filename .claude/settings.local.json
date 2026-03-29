@@ -3,7 +3,13 @@
     "allow": [
       "Bash(npm init:*)",
       "Bash(npm install:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(mkdir -p /mnt/c/keeprunning-new/contracts/lib/reactive-lib && cp -r /mnt/c/keeprunning-new/reactive-smart-contract-demos/lib/reactive-lib/src/* /mnt/c/keeprunning-new/contracts/lib/reactive-lib/)",
+      "Bash(npx hardhat:*)",
+      "Bash(echo \"SEPOLIA_RPC_URL: $SEPOLIA_RPC_URL\")",
+      "Bash(node -e \"require\\('dotenv'\\).config\\(\\); console.log\\('SEPOLIA_RPC_URL:', process.env.SEPOLIA_RPC_URL\\)\")",
+      "Bash(node scripts/test-connection.js)",
+      "Bash(export SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY && node scripts/test-connection.js)"
     ]
   }
 }

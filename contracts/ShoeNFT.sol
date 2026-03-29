@@ -32,7 +32,7 @@ contract ShoeNFT is ERC721, ERC721Enumerable, Ownable {
 
     // Level configuration
     struct LevelConfig {
-        uint256 requiredDistance; // in km
+        uint256 requiredDistance; // in km × 10 (e.g., 500 = 50km)
         string name;
         string description;
     }
@@ -48,12 +48,12 @@ contract ShoeNFT is ERC721, ERC721Enumerable, Ownable {
     uint256 private _tokenIdCounter;
     address public shoeReactiveContract;
 
-    // Level configurations (distances in km)
+    // Level configurations (distances in km × 10, e.g., 500 = 50km)
     uint256 public constant LEVEL_1_DISTANCE = 0;     // 0 km - Base
-    uint256 public constant LEVEL_2_DISTANCE = 50;    // 50 km - Bronze
-    uint256 public constant LEVEL_3_DISTANCE = 150;   // 150 km - Silver
-    uint256 public constant LEVEL_4_DISTANCE = 300;   // 300 km - Gold
-    uint256 public constant LEVEL_5_DISTANCE = 500;   // 500 km - Rainbow
+    uint256 public constant LEVEL_2_DISTANCE = 500;   // 50 km - Bronze
+    uint256 public constant LEVEL_3_DISTANCE = 1500;  // 150 km - Silver
+    uint256 public constant LEVEL_4_DISTANCE = 3000;  // 300 km - Gold
+    uint256 public constant LEVEL_5_DISTANCE = 5000;  // 500 km - Rainbow
 
     uint256 public constant MAX_LEVEL = 5;
 
@@ -91,22 +91,22 @@ contract ShoeNFT is ERC721, ERC721Enumerable, Ownable {
         levelConfigs[2] = LevelConfig({
             requiredDistance: LEVEL_2_DISTANCE,
             name: "Bronze Warrior",
-            description: "50 km conquered - Bronze status achieved"
+            description: "50 km (500) conquered - Bronze status achieved"
         });
         levelConfigs[3] = LevelConfig({
             requiredDistance: LEVEL_3_DISTANCE,
             name: "Silver Knight",
-            description: "150 km conquered - Silver status achieved"
+            description: "150 km (1500) conquered - Silver status achieved"
         });
         levelConfigs[4] = LevelConfig({
             requiredDistance: LEVEL_4_DISTANCE,
             name: "Golden Champion",
-            description: "300 km conquered - Golden status achieved"
+            description: "300 km (3000) conquered - Golden status achieved"
         });
         levelConfigs[5] = LevelConfig({
             requiredDistance: LEVEL_5_DISTANCE,
             name: "Rainbow Legend",
-            description: "500 km conquered - Legendary status achieved"
+            description: "500 km (5000) conquered - Legendary status achieved"
         });
 
         // Set default base URI
@@ -137,7 +137,7 @@ contract ShoeNFT is ERC721, ERC721Enumerable, Ownable {
     /**
      * @dev Upgrade a user's shoe to a higher level (dynamic minting)
      * @param user The user whose shoe to upgrade
-     * @param totalDistance User's total running distance in km × 10
+     * @param totalDistance User's total running distance in km × 10 (e.g., 500 = 50km)
      * @return The new level
      */
     function upgradeShoe(address user, uint256 totalDistance) external onlyShoeReactive returns (uint256) {
@@ -146,9 +146,8 @@ contract ShoeNFT is ERC721, ERC721Enumerable, Ownable {
 
         if (currentLevel >= MAX_LEVEL) revert AlreadyMaxLevel();
 
-        // totalDistance is already in km × 10 (e.g., 55km = 550)
-        uint256 distanceInKm = totalDistance;
-        uint256 targetLevel = _calculateTargetLevel(distanceInKm);
+        // totalDistance is in km × 10, same as level thresholds
+        uint256 targetLevel = _calculateTargetLevel(totalDistance);
 
         if (targetLevel <= currentLevel) revert InsufficientDistance();
 
@@ -187,10 +186,10 @@ contract ShoeNFT is ERC721, ERC721Enumerable, Ownable {
 
     function getRequiredDistance(uint256 level) external pure returns (uint256) {
         if (level == 1) return LEVEL_1_DISTANCE;
-        if (level == 2) return LEVEL_2_DISTANCE;
-        if (level == 3) return LEVEL_3_DISTANCE;
-        if (level == 4) return LEVEL_4_DISTANCE;
-        if (level == 5) return LEVEL_5_DISTANCE;
+        if (level == 2) return LEVEL_2_DISTANCE;  // 500 = 50km
+        if (level == 3) return LEVEL_3_DISTANCE;  // 1500 = 150km
+        if (level == 4) return LEVEL_4_DISTANCE;  // 3000 = 300km
+        if (level == 5) return LEVEL_5_DISTANCE;  // 5000 = 500km
         return 0;
     }
 

@@ -137,12 +137,12 @@ contract ShoeRunOrigin {
     }
 
     /**
-     * @dev Get user's total running distance in kilometers
+     * @dev Get user's total running distance
      * @param user The user address
-     * @return Total distance in kilometers (1 decimal place represented as * 10)
+     * @return Total distance in km × 10 (e.g., 500 = 50km, 555 = 55.5km)
      */
     function getUserTotalDistance(address user) external view returns (uint256) {
-        return _userTotalDistance[user] / 100; // Convert to km with 1 decimal place
+        return _userTotalDistance[user] / 100; // Convert meters to km × 10
     }
 
     /**

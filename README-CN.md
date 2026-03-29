@@ -46,11 +46,11 @@ Reactive Network 的解决方案
 
 3\. 已部署合约地址
 
-ShoeRunOrigin (sepolia): 0x4A99B50b1CA9bFA9e23574aF2978f00c27D76DaF
+ShoeRunOrigin (sepolia): 0x6Ebb6a7aF80cd03efB27D626F73C6502795F8624
 
-ShoeNFT (lasna): 0xd9930Af8Ba1Bb76bbC0625A1f573498Bd2DddBB2
+ShoeNFT (lasna): 0xDBCda2fa840687585D8d987E485631E889E405dE
 
-ShoeReactive (lasna): 0x8cd43F8DB3608C6cca938f9367A2559Ddf559733
+ShoeReactive (lasna): 0x5aB76A1dE8683d7934bFb901e1Ade7FA6E837d06
 
 
 
@@ -58,7 +58,7 @@ ShoeReactive (lasna): 0x8cd43F8DB3608C6cca938f9367A2559Ddf559733
 
 步骤 1：用户提交跑步记录（Origin 链交易）
 
-交易哈希： 0x42af2bf60c31a5218a72d4bd0fe9739f71ffc521189a9916047333a032bcb707
+交易哈希： 0x5eb33e2c71ff3a64739d0693097166a667e05695b88bdd567a0bd7c17c8921e2
 
 区块浏览器： https://etherscan.io/
 
@@ -66,19 +66,15 @@ ShoeReactive (lasna): 0x8cd43F8DB3608C6cca938f9367A2559Ddf559733
 
 步骤 2：Reactive 合约自动触发（Reactive 交易）
 
-说明： 由于 Reactive Network 测试网存在不稳定性，ReactVM 未能自动触发。但是，项目已实现了完整的 Reactive 合约逻辑，包括：
+交易哈希： 0xcccd07b7ea4035afeb918708ee52d35653ea036bf2692164826ee6ff6477ef62
 
-订阅配置 (service.subscribe)
+区块浏览器： https://lasna.reactscan.net/
 
-事件处理 (react 函数)
-
-跨链查询接口 (crossChainQuery)
-
-手动升级功能已成功验证，证明了合约逻辑的正确性。在相同环境下，Reactive Network 的官方示例也无法自动触发，因此判断这是测试网的问题。
+说明：Reactive Network 监听到事件，调用 react函数
 
 步骤 3：NFT 升级完成（目标链交易）
 
-交易哈希： 0x0edb3ec5573def2a59a81c66e90a022b1ce66fcbfababad860ac0f5f5922e4e6
+交易哈希： 0x962bbb27e38a440473dd12f04c52693c01ff09009d56a2be966113889219c7b3
 
 区块浏览器： https://lasna.reactscan.net/
 
@@ -511,6 +507,4 @@ text
 支持 ERC-6551 等标准，实现运动凭证在跨应用间的互通性。
 
 引入跨链机制，提升 RWA 资产的流动性。
-
-
 
