@@ -1,6 +1,8 @@
 <h1>🏃 Keep Running - 链上跑步升级 NFT</h1>
 
 
+<img width="1710" height="847" alt="屏幕截图 2026-06-11 170241" src="https://github.com/user-attachments/assets/57aa3452-66d7-441a-a970-9586232c3774" />
+
 
 <h2>1. 项目简介</h2>
 
