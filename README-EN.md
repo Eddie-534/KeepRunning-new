@@ -1,6 +1,8 @@
 <h1>﻿🏃 Keep Running - On-Chain Running Upgrade NFT</h1>
 
 
+<img width="1710" height="847" alt="屏幕截图 2026-06-11 170241" src="https://github.com/user-attachments/assets/b299fb82-0d69-4cd6-b264-f929720d5e5f" />
+
 
 <h2>1. Project Introduction</h2>
 
